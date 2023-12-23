@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/header.ejs'); %>
+<body class="app">
+    <div class="app__wrapper">
+        <div class="app__content">
+            <main class="app__main">
+                <%- include('./partials/navbar.ejs'); %>
+                <div class="app__center">
+                    <div class="app__head">
+                        <div class="app__head__left">
+                            <button class="btn">
+                                <span class="material-symbols-outlined">
+                                    menu
+                                </span>
+                            </button>
+                        </div>
+                        <div class="app__head__right"></div>
+                    </div>
+                    <h1><%= name_page %></h1>
+                    <p><%= description %></p>
+                    <div id="app">
+                        <div v-if="servers.lenght == 0">загрузка</div>
+                        <ul v-else>
+                            <li v-for="server in servers">
+                                <span>{{server.id}}</span>
+                                <span>{{server.name}}</span>
+                                <span>{{server.status}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <%- include('./partials/futer.ejs'); %>
+</body>
+</html>
