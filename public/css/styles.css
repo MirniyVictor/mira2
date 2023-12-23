@@ -61,7 +61,7 @@ body {
 }
 
 .app__left {
-    width: 72px;
+    width: 0;
     background: #fdf8f8;
 }
 
@@ -73,8 +73,8 @@ body {
 .app__head {
     display: flex;
     align-items: center;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 15px;
+    margin-bottom: 15px;
     background: #eee;
     box-shadow: 2px 2px 2px #c1bebe;
 }
