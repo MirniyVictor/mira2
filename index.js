@@ -11,7 +11,6 @@ const __dirname = path.resolve();
 
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, 'templates'));
-console.log('путь к шаблонам -> '.inverse.yellow + app.get('views').inverse.yellow);
 app.use(serverRoutes);
 
 /* sys info */
@@ -19,6 +18,7 @@ app.use(serverRoutes);
 // console.log(os.networkInterfaces());
 // console.log(os.version());
 console.log('Архитектура: -> '.inverse.yellow + os.version().inverse.yellow);
+console.log('путь к шаблонам -> '.inverse.yellow + app.get('views').inverse.yellow);
 
 /* sys info */
 
