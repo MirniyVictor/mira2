@@ -3,6 +3,7 @@ import path from 'path';
 import colors from 'colors';
 const app = express();
 import serverRoutes from './routes/servers.js';
+import os from 'node:os';
 
 const PORT = process.env.PORT ?? 3000;
 const STATIC_DIR = 'static';
@@ -12,6 +13,15 @@ app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, 'templates'));
 console.log('путь к шаблонам -> '.inverse.yellow + app.get('views').inverse.yellow);
 app.use(serverRoutes);
+
+/* sys info */
+
+// console.log(os.networkInterfaces());
+// console.log(os.userInfo());
+// console.log(os.version());
+console.log('Архитектура: -> '.inverse.yellow + os.version().inverse.yellow);
+
+/* sys info */
 
 /* express static & dinamic pages */
 
