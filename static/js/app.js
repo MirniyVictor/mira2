@@ -3,9 +3,8 @@ console.log('ok');
 const App = {
     data() {
         return {
-            servers: [
-
-            ]
+            active: false,
+            servers: []
         }
     },
     async mounted() {

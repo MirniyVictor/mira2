@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/header.ejs'); %>
-<body class="app">
+<body class="app" id="app">
     <div class="app__wrapper">
         <div class="app__content">
             <main class="app__main">
@@ -9,7 +9,7 @@
                 <div class="app__center">
                     <div class="app__head">
                         <div class="app__head__left">
-                            <button class="btn">
+                            <button class="btn" @click="active = !active">
                                 <span class="material-symbols-outlined">
                                     menu
                                 </span>

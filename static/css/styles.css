@@ -62,7 +62,15 @@ body {
 
 .app__left {
     width: 0;
+    transform: translate(-200px, 0);
+    transition: width 200ms linear;
     background: #fdf8f8;
+}
+.app__left.active {
+    width: 200px;
+    transform: translate(0, 0);
+    transition: width 200ms linear;
+    box-shadow: 1px 2px 3px #b9b5b5;
 }
 
 .app__center {
