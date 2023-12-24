@@ -17,7 +17,6 @@ app.use(serverRoutes);
 /* sys info */
 
 // console.log(os.networkInterfaces());
-// console.log(os.userInfo());
 // console.log(os.version());
 console.log('Архитектура: -> '.inverse.yellow + os.version().inverse.yellow);
 
@@ -42,6 +41,16 @@ app.get('/about', (req, res) => {
         name_page: 'Страница о нас',
         description: 'Описание страницы о нас',
         active: 'about'
+    });
+});
+
+app.get('/sysinfo', (req, res) => {
+    res.render('sysinfo', {
+        title: 'M.I.R.A - sip service (sysinfo page)',
+        name_page: 'Информация о системе',
+        description: 'Описание информации',
+        active: 'sysinfo',
+        os_info: os.version()
     });
 });
 
