@@ -60,19 +60,6 @@ body {
     justify-content: flex-start;
 }
 
-.app__left {
-    width: 0;
-    transform: translate(-200px, 0);
-    transition: width 200ms linear;
-    background: #fdf8f8;
-}
-.app__left.active {
-    width: 200px;
-    transform: translate(0, 0);
-    transition: width 200ms linear;
-    box-shadow: 1px 2px 3px #b9b5b5;
-}
-
 .app__center {
     flex: 1;
     padding: 0;
@@ -82,9 +69,23 @@ body {
     display: flex;
     align-items: center;
     padding: 15px;
-    margin-bottom: 15px;
     background: #fdf5f5;
     box-shadow: 2px 2px 2px #c1bebe;
+}
+
+.app__head__left .btn .material-symbols-outlined {
+    color: #333;
+    transition: all 0.5s;
+}
+
+.app__head__left .btn:hover .material-symbols-outlined {
+    color: #7242bf;
+    transition: all 0.5s;
+}
+
+.main__container {
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* contents */
@@ -101,3 +102,78 @@ body {
 }
 
 /* buttons & links */
+
+/* navbar */
+
+.app__left {
+    width: 0;
+    transform: translate(-250px, 0);
+    transition: all 0.5s;
+    background: #fdf8f8;
+}
+.app__left.active {
+    width: 250px;
+    transform: translate(0, 0);
+    transition: all 0.5s;
+    box-shadow: 1px 2px 3px #b9b5b5;
+}
+
+.app__left_navbar {
+    width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.app__left_navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.app__left_navbar ul li {
+    margin-bottom: 20px;
+}
+
+.app__left_navbar ul li:last-child {
+    margin-bottom: 0;
+}
+
+.app__left_navbar__item {
+    display: flex;
+    align-items: center;
+}
+
+.app__left_navbar__item .material-symbols-outlined {
+    margin-right: 10px;
+    color: #333;
+    transition: all 0.5s;
+}
+
+.app__left_navbar__item a {
+    text-decoration: none;
+    color: #333;
+    transition: all 0.5s;
+    font-size: 14px;
+}
+
+.app__left_navbar__item:hover a {
+    color: #7242bf;
+    transition: all 0.5s;
+}
+
+.app__left_navbar__item:hover .material-symbols-outlined {
+    color: #7242bf;
+    transition: all 0.5s;
+}
+
+.app__left_navbar ul li.active .app__left_navbar__item .material-symbols-outlined {
+    color: #7242bf;
+    transition: all 0.5s;
+}
+
+.app__left_navbar ul li.active .app__left_navbar__item a {
+    color: #7242bf;
+    transition: all 0.5s;    
+}
+
+/* navbar */

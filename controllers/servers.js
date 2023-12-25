@@ -1,9 +1,9 @@
 let services = [
-    {id: '1', name: 'test 1', status: 'working'},
-    {id: '2', name: 'test 2', status: 'working'},
-    {id: '3', name: 'test 3', status: 'working'},
-    {id: '4', name: 'test 4', status: 'pending'},
-    {id: '5', name: 'test 5', status: 'pending'}
+    {id: '1', name: '1001', status: 'Registered'},
+    {id: '2', name: '1002', status: 'Registered'},
+    {id: '3', name: '1003', status: 'Unregistered'},
+    {id: '4', name: '1004', status: 'Registered'},
+    {id: '5', name: '1005', status: 'Unregistered'}
 ];
 
 export const getAll = (req, res) => {

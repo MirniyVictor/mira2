@@ -1,7 +1,30 @@
 <div class="app__left" :class="{ active }">
-    <ul>
-        <li><a href="/" <% if (active == 'main') { %>class="active" <% } %>>Main page</a></li>
-        <li><a href="/about" <% if (active == 'about') { %>class="active" <% } %>>About page</a></li>
-        <li><a href="/sysinfo" <% if (active == 'sysinfo') { %>class="active" <% } %>>Sysinfo page</a></li>
-    </ul>
+    <div class="app__left_navbar">
+        <ul>
+            <li <% if (active == 'main') { %>class="active" <% } %>>
+                <div class="app__left_navbar__item">
+                    <span class="material-symbols-outlined">
+                        home
+                    </span>
+                    <a href="/">Главная страница</a>
+                </div>
+            </li>
+            <li <% if (active == 'sysinfo') { %>class="active" <% } %>>
+                <div class="app__left_navbar__item">
+                    <span class="material-symbols-outlined">
+                        rebase
+                    </span>
+                    <a href="/sysinfo">Информация о системе</a>
+                </div>
+            </li>
+            <li <% if (active == 'about') { %>class="active" <% } %>>
+                <div class="app__left_navbar__item">
+                    <span class="material-symbols-outlined">
+                        deployed_code
+                    </span>
+                    <a href="/about">О Mira</a>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>

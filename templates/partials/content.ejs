@@ -1,0 +1,14 @@
+<div class="main__container">
+    <h1><%= name_page %></h1>
+    <p><%= description %></p>
+    <% if (active == 'main') { %>
+    <div>
+        <div v-if="servers.lenght == 0">загрузка</div>
+        <ul v-else>
+            <li v-for="server in servers">
+                <span>id: {{server.id}} phone: {{server.name}} status: {{server.status}}</span>
+            </li>
+        </ul>
+    </div>
+    <% } %>
+</div>
