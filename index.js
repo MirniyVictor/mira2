@@ -5,7 +5,7 @@ const app = express();
 import serverRoutes from './routes/servers.js';
 import os from 'node:os';
 
-const PORT = process.env.PORT ?? 3000;
+const PORT = 3000;
 const STATIC_DIR = 'static';
 const __dirname = path.resolve();
 
@@ -18,7 +18,7 @@ app.use(serverRoutes);
 // console.log(os.networkInterfaces());
 // console.log(os.version());
 console.log('Архитектура: -> '.inverse.yellow + os.version().inverse.yellow);
-console.log('путь к шаблонам -> '.inverse.yellow + app.get('views').inverse.yellow);
+console.log('Путь к шаблонам -> '.inverse.yellow + app.get('views').inverse.yellow);
 
 /* sys info */
 
