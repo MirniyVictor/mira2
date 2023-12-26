@@ -12,6 +12,9 @@
         </div>
     <% } %>
     <% if (active == 'sysinfo') { %>
-        <%- include('sysinfo_content.ejs'); %>
+        <%- include('sysinfo_page.ejs'); %>
+    <% } %>
+    <% if (active == 'about') { %>
+        <%- include('about_page.ejs'); %>
     <% } %>
 </div>
