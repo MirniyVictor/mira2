@@ -1,10 +1,10 @@
 import express from 'express';
 import path from 'path';
 import colors from 'colors';
-const app = express();
 import serverRoutes from './routes/servers.js';
 import os from 'node:os';
 
+const app = express();
 const PORT = 3000;
 const STATIC_DIR = 'static';
 const __dirname = path.resolve();
