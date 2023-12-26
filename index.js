@@ -4,6 +4,9 @@ import colors from 'colors';
 import serverRoutes from './routes/servers.js';
 import os from 'node:os';
 
+import myJson from './main_conf.json' assert {type: 'json'};
+
+
 const app = express();
 const PORT = 3000;
 const STATIC_DIR = 'static';
@@ -17,6 +20,7 @@ app.use(serverRoutes);
 
 // console.log(os.networkInterfaces());
 // console.log(os.version());
+console.log('Файл описания -> '.inverse.yellow + myJson.name.inverse.yellow);
 console.log('Архитектура: -> '.inverse.yellow + os.version().inverse.yellow);
 console.log('Путь к шаблонам -> '.inverse.yellow + app.get('views').inverse.yellow);
 
@@ -28,8 +32,8 @@ app.use(express.static(path.join(__dirname, STATIC_DIR)));
 
 app.get('/', (req, res) => {
     res.render('index', {
-        title: 'M.I.R.A - sip service (main page)',
-        name_page: 'Главная страница',
+        title: myJson.main_page.title,
+        name_page: myJson.main_page.name_page,
         description: 'Описание страницы',
         active: 'main'
     });
