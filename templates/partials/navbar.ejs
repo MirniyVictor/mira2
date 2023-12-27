@@ -1,7 +1,7 @@
 <div class="app__left" :class="{ active }">
     <div class="app__left_navbar">
         <ul>
-            <li <% if (active == 'main') { %>class="active" <% } %>>
+            <li <% if (page_id == 'main') { %>class="active" <% } %>>
                 <div class="app__left_navbar__item">
                     <span class="material-symbols-outlined">
                         home
@@ -9,7 +9,7 @@
                     <a href="/">Главная страница</a>
                 </div>
             </li>
-            <li <% if (active == 'sysinfo') { %>class="active" <% } %>>
+            <li <% if (page_id == 'sysinfo') { %>class="active" <% } %>>
                 <div class="app__left_navbar__item">
                     <span class="material-symbols-outlined">
                         rebase
@@ -17,7 +17,7 @@
                     <a href="/sysinfo">Информация о системе</a>
                 </div>
             </li>
-            <li <% if (active == 'about') { %>class="active" <% } %>>
+            <li <% if (page_id == 'about') { %>class="active" <% } %>>
                 <div class="app__left_navbar__item">
                     <span class="material-symbols-outlined">
                         deployed_code

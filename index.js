@@ -16,16 +16,6 @@ app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, 'templates'));
 app.use(serverRoutes);
 
-/* sys info */
-
-// console.log(os.networkInterfaces());
-// console.log(os.version());
-console.log('Файл описания -> '.inverse.yellow + myJson.name.inverse.yellow);
-console.log('Архитектура: -> '.inverse.yellow + os.version().inverse.yellow);
-console.log('Путь к шаблонам -> '.inverse.yellow + app.get('views').inverse.yellow);
-
-/* sys info */
-
 /* express static & dinamic pages */
 
 app.use(express.static(path.join(__dirname, STATIC_DIR)));
@@ -34,8 +24,8 @@ app.get('/', (req, res) => {
     res.render('index', {
         title: myJson.main_page.title,
         name_page: myJson.main_page.name_page,
-        description: 'Описание страницы',
-        active: 'main'
+        description: myJson.main_page.description,
+        page_id: myJson.main_page.id
     });
 });
 
@@ -44,7 +34,7 @@ app.get('/about', (req, res) => {
         title: 'M.I.R.A - sip service (about page)',
         name_page: 'Страница о нас',
         description: 'Описание страницы о нас',
-        active: 'about'
+        page_id: 'about'
     });
 });
 
@@ -53,7 +43,7 @@ app.get('/sysinfo', (req, res) => {
         title: 'M.I.R.A - sip service (sysinfo page)',
         name_page: 'Информация о системе',
         description: 'Описание информации',
-        active: 'sysinfo',
+        page_id: 'sysinfo',
         os_info: os.version()
     });
 });
@@ -66,4 +56,7 @@ app.get('/sysinfo', (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Сервер`.inverse.green + ` M.I.R.A `.brightGreen + `запущен на порту -> ${PORT}...`.inverse.green);
+    console.log('Файл описания -> main_config.json -> '.inverse.yellow + myJson.name.inverse.yellow);
+    console.log('Путь к шаблонам -> '.inverse.yellow + app.get('views').inverse.yellow);
+    console.log('Архитектура: -> '.inverse.yellow + os.version().inverse.yellow);
 });

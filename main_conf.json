@@ -5,6 +5,6 @@
         "title": "M.I.R.A - sip service (main page)",
         "name_page": "Главная страница",
         "description": "Описание страницы",
-        "active": "main"
+        "id": "main"
     }
 }
